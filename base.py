@@ -9,3 +9,8 @@ state, time = list( zip( *map(itemgetter('state', 'last_updated'), raw_data) ))
 
 # each 
 state = list(map(itemgetter('state'), raw_data))
+
+
+def string_to_dict(string_as_dict):
+    from ast import literal_eval
+    return literal_eval(string_as_dict)
