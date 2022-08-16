@@ -22,7 +22,4 @@ def log_validate(log_time_as_datetime):
     delta_t = (now - log_time)
     # print(now, log_time, delta_t)
 
-    if delta_t >= timedelta(seconds=60):
-        return "OFF"
-    else:
-        return "ON"
+    return "OFF" if delta_t >= timedelta(seconds=60) else "ON"
